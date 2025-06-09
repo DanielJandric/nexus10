@@ -14,7 +14,7 @@ export {
   FormField,
 }
 
-export function FormField({ name, children }: { name: string; children: React.ReactNode }) {
+function FormField({ name, children }: { name: string; children: React.ReactNode }) {
   const { control } = useFormContext()
   return <Controller name={name} control={control} render={({ field }) => children(field)} />
 } 
